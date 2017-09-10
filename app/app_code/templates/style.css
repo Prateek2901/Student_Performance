@@ -1,0 +1,42 @@
+$zindex-dropdown-backdrop:  990 !default;
+$zindex-navbar:            1000 !default;
+$zindex-dropdown:          1000 !default;
+$zindex-fixed:             1030 !default;
+$zindex-sticky:            1030 !default;
+$zindex-modal-backdrop:    1040 !default;
+$zindex-modal:             1050 !default;
+$zindex-popover:           1060 !default;
+$zindex-tooltip:           1070 !default;
+
+/* ---- reset ---- */
+
+body {
+  margin: auto;
+  font:normal 50% Arial, Helvetica, sans-serif;
+}
+
+.container
+{
+  padding-top:5%;
+  padding-left:6%;
+  padding-right:6%;
+}
+
+
+canvas {
+  display: block;
+  vertical-align: bottom;
+}
+
+/* ---- particles.js container ---- */
+
+#particles-js {
+  position: absolute;
+  width: 100vw;
+  height: 200%;
+  background-image: url("https://i.imgur.com/2vOXiPV.jpg?1");
+  background-color: #262626;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
