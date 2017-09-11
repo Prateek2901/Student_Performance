@@ -1,245 +1,257 @@
-
-
 <!DOCTYPE html>
 <html >
-
-<head>
-  <meta charset="UTF-8">
-  <link rel="shortcut icon" type="image/x-icon" href="https://production-assets.codepen.io/assets/favicon/favicon-8ea04875e70c4b0bb41da869e81236e54394d63638a1ef12fa558a4a835f1164.ico" />
-  <link rel="mask-icon" type="" href="https://production-assets.codepen.io/assets/favicon/logo-pin-f2d2b6d2c61838f7e76325261b7195c27224080bc099486ddd6dccb469b8e8e6.svg" color="#111" />
-  <title>CodePen - Student</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-
-  <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css'>
-
+   <head>
+      <meta charset="UTF-8">
+      <title>Student</title>
+      <link href="https://cdn.bootcss.com/rangeslider.js/2.3.1/rangeslider.min.css" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+      <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css'>
       <style>
-      $zindex-dropdown-backdrop:  990 !default;
-$zindex-navbar:            1000 !default;
-$zindex-dropdown:          1000 !default;
-$zindex-fixed:             1030 !default;
-$zindex-sticky:            1030 !default;
-$zindex-modal-backdrop:    1040 !default;
-$zindex-modal:             1050 !default;
-$zindex-popover:           1060 !default;
-$zindex-tooltip:           1070 !default;
+         $zindex-dropdown-backdrop:  990 !default;
+         $zindex-navbar:            1000 !default;
+         $zindex-dropdown:          1000 !default;
+         $zindex-fixed:             1030 !default;
+         $zindex-sticky:            1030 !default;
+         $zindex-modal-backdrop:    1040 !default;
+         $zindex-modal:             1050 !default;
+         $zindex-popover:           1060 !default;
+         $zindex-tooltip:           1070 !default;
+         /* ---- reset ---- */
+         body {
+         margin: auto;
+         font:normal 50% Arial, Helvetica, sans-serif;
+         }
+         .container
+         {
+         padding-top:5%;
+         padding-left:6%;
+         padding-right:6%;
+         }
+         canvas {
+         display: block;
+         vertical-align: bottom;
+         }
+         /* ---- particles.js container ---- */
+         #particles-js {
+         position: absolute;
+         width: 100vw;
+         height: 200%;
+         background-image: url("https://i.imgur.com/2vOXiPV.jpg?1");
+         background-color: #262626;
+         background-repeat: no-repeat;
+         background-size: cover;
+         background-position: 50% 50%;
+         }
 
-/* ---- reset ---- */
-
-body {
-  margin: auto;
-  font:normal 50% Arial, Helvetica, sans-serif;
-}
-
-.container
-{
-  padding-top:5%;
-  padding-left:6%;
-  padding-right:6%;
-}
-
-
-canvas {
-  display: block;
-  vertical-align: bottom;
-}
-
-/* ---- particles.js container ---- */
-
-#particles-js {
-  position: absolute;
-  width: 100vw;
-  height: 200%;
-  background-image: url("https://i.imgur.com/2vOXiPV.jpg?1");
-  background-color: #262626;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 50% 50%;
-}
-
-    </style>
-
-  
-  
-  
-  
-</head>
-
-<body translate="no" >
-
-  <div id="particles-js"></div>
-<div class="container">
-  <div class="card">
-    <div class="text-center h3 card-header">
-      Performance Predictor
-    </div>
-    <div class="card-block">
-      <h4 class="card-title">Please Enter Student Details</h4>
-      <p class="card-text">
-        <!--html form-->
-        <form>
-          <div class="form-group">
-            <label for="nameLabel">What Should We Call You?</label>
-            <input type="text" class="form-control" id="inputName" aria-describedby="nameInput" placeholder="Enter your Name">
-            <!--
-<small id="bName" class="form-text text-muted">Must say Beautiful Name.</small>
--->
-          </div>
-                    <div class="form-group">
-            <label for="nameLabel">No. of Days Absent</label>
-            <input type="text" class="form-control" id="inputName" aria-describedby="nameInput" placeholder="Absentism">
-          </div>
-          
-          <div class="form-group">
-            <label for="nameLabel">Going Out With Friends</label>
-            <input type="text" class="form-control" id="inputName" aria-describedby="nameInput" placeholder="">
-          </div>
-           <div class="form-group">
-            <label for="nameLabel">Free Time</label>
-            <input type="text" class="form-control" id="inputName" aria-describedby="nameInput" placeholder="">
-          </div>
-          <div class="form-group">
-            <label for="nameLabel">Family Relation</label>
-            <input type="text" class="form-control" id="inputName" aria-describedby="nameInput" placeholder="">
-          </div>
-                   <div class="form-group">
-            <label for="nameLabel">Going Out With Friends</label>
-            <input type="text" class="form-control" id="inputName" aria-describedby="nameInput" placeholder="">
-          </div>
-          <div class="form-group">
-            <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
-      </p>
+         #submit
+         {
+         	margin-top: 2vh;
+         						margin-left:auto;
+         						margin-right:auto; 
+         }
+      </style>
+   </head>
+   <body translate="no" >
+      <div id="particles-js"></div>
+      <div class="container">
+         <div class="card">
+            <div class="text-center h3 card-header">
+               Performance Predictor
+            </div>
+            <div class="card-block">
+               <h4 class="card-title">Please Enter Student Details</h4>
+               <p class="card-text">
+                  <!--html form-->
+               <form >
+                  <div class="form-group">
+                     <label for="nameLabel">What Should We Call You?</label>
+                     <input type="text" class="form-control" id="inputName" aria-describedby="nameInput" placeholder="Enter your Name">
+                     <!--
+                        <small id="bName" class="form-text text-muted">Must say Beautiful Name.</small>
+                        -->
+                  </div>
+                  <div class="form-group">
+                     <label for="nameLabel">No. of Days Absent</label>
+                     <div class="input-group">
+                     <input type="text" class="form-control" placeholder="No. of Days Absent" aria-describedby="basic-addon2">
+  <span class="input-group-addon" id="basic-addon2">Days</span></div>     
+                  </div>
+                  <div class="input-group row">
+                  <div class="col-4 offset-md-1">
+                     <label for="nameLabel">Going Out With Friends</label>
+                     <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Dropdown button
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                           <a class="dropdown-item" href="#">Very Less</a>
+                           <a class="dropdown-item" href="#">Less</a>
+                           <a class="dropdown-item" href="#">Normal</a>
+                           <a class="dropdown-item" href="#">High</a>
+                           <a class="dropdown-item" href="#">Very High</a>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-2">
+                     <label for="nameLabel">Free Time</label>
+                     <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Click
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                           <a class="dropdown-item" href="#">Very Less</a>
+                           <a class="dropdown-item" href="#">Less</a>
+                           <a class="dropdown-item" href="#">Normal</a>
+                           <a class="dropdown-item" href="#">High</a>
+                           <a class="dropdown-item" href="#">Very High</a>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-4">
+                     <label for="nameLabel">Family Relation</label>
+                     <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Dropdown button
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                           <a class="dropdown-item" href="#">Very Bad</a>
+                           <a class="dropdown-item" href="#">Bad</a>
+                           <a class="dropdown-item" href="#">Normal</a>
+                           <a class="dropdown-item" href="#">Good</a>
+                           <a class="dropdown-item" href="#">Excellent</a>
+                        </div>
+                     </div>
+                  </div>
+                  </div>
+                  <div class="form-group">
+                     <a href='/result/' class="btn btn-primary col offset-md-4" id="submit">Submit</a>
+               </form>
+               </p>
+               </div>
+               <div class="card-footer text-center text-muted">
+                  ML is Fun
+               </div>
+            </div>
+         </div>
       </div>
-      <div class="card-footer text-center text-muted">
-        ML is Fun
-      </div>
-    </div>
-  </div>
-</div>
-  
-  <script src='https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js'></script>
-<script src='https://code.jquery.com/jquery-3.1.1.slim.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js'></script>
-<script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js'></script>
+      <script src='https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js'></script>
+      <script src='https://code.jquery.com/jquery-3.1.1.slim.min.js'></script>
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js'></script>
+      <script src="https://cdn.bootcss.com/rangeslider.js/2.3.1/rangeslider.min.js"></script>
+      <script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js'></script>
+      <script>
+       $('input[type="range"]').rangeslider();
 
-    <script>
-    particlesJS("particles-js", {
-  particles: {
-    number: {
-      value: 250,
-      density: {
-        enable: true,
-        value_area: 800
-      }
-    },
-    color: {
-      value: "#ffffff"
-    },
-    shape: {
-      type: "circle",
-      stroke: {
-        width: 0,
-        color: "#000000"
-      },
-      polygon: {
-        nb_sides: 5
-      },
-      image: {
-        src: "img/github.svg",
-        width: 100,
-        height: 100
-      }
-    },
-    opacity: {
-      value: 0.5,
-      random: false,
-      anim: {
-        enable: false,
-        speed: 1,
-        opacity_min: 0.1,
-        sync: false
-      }
-    },
-    size: {
-      value: 3,
-      random: true,
-      anim: {
-        enable: false,
-        speed: 40,
-        size_min: 0.1,
-        sync: false
-      }
-    },
-    line_linked: {
-      enable: true,
-      distance: 150,
-      color: "#ffffff",
-      opacity: 0.4,
-      width: 1
-    },
-    move: {
-      enable: true,
-      speed: 6,
-      direction: "none",
-      random: false,
-      straight: false,
-      out_mode: "out",
-      bounce: false,
-      attract: {
-        enable: false,
-        rotateX: 600,
-        rotateY: 1200
-      }
-    }
-  },
-  interactivity: {
-    detect_on: "canvas",
-    events: {
-      onhover: {
-        enable: true,
-        mode: "grab"
-      },
-      onclick: {
-        enable: true,
-        mode: "repulse"
-      },
-      resize: true
-    },
-    modes: {
-      grab: {
-        distance: 140,
-        line_linked: {
-          opacity: 1
-        }
-      },
-      bubble: {
-        distance: 400,
-        size: 40,
-        duration: 2,
-        opacity: 8,
-        speed: 3
-      },
-      repulse: {
-        distance: 200,
-        duration: 0.4
-      },
-      push: {
-        particles_nb: 4
-      },
-      remove: {
-        particles_nb: 2
-      }
-    }
-  },
-  retina_detect: true
-});
-  </script>
-
-  
-  
-
-</body>
+         particlesJS("particles-js", {
+         particles: {
+         number: {
+           value: 250,
+           density: {
+             enable: true,
+             value_area: 800
+           }
+         },
+         color: {
+           value: "#ffffff"
+         },
+         shape: {
+           type: "circle",
+           stroke: {
+             width: 0,
+             color: "#000000"
+           },
+           polygon: {
+             nb_sides: 5
+           },
+           image: {
+             src: "img/github.svg",
+             width: 100,
+             height: 100
+           }
+         },
+         opacity: {
+           value: 0.5,
+           random: false,
+           anim: {
+             enable: false,
+             speed: 1,
+             opacity_min: 0.1,
+             sync: false
+           }
+         },
+         size: {
+           value: 3,
+           random: true,
+           anim: {
+             enable: false,
+             speed: 40,
+             size_min: 0.1,
+             sync: false
+           }
+         },
+         line_linked: {
+           enable: true,
+           distance: 150,
+           color: "#ffffff",
+           opacity: 0.4,
+           width: 1
+         },
+         move: {
+           enable: true,
+           speed: 6,
+           direction: "none",
+           random: false,
+           straight: false,
+           out_mode: "out",
+           bounce: false,
+           attract: {
+             enable: false,
+             rotateX: 600,
+             rotateY: 1200
+           }
+         }
+         },
+         interactivity: {
+         detect_on: "canvas",
+         events: {
+           onhover: {
+             enable: true,
+             mode: "grab"
+           },
+           onclick: {
+             enable: true,
+             mode: "repulse"
+           },
+           resize: true
+         },
+         modes: {
+           grab: {
+             distance: 140,
+             line_linked: {
+               opacity: 1
+             }
+           },
+           bubble: {
+             distance: 400,
+             size: 40,
+             duration: 2,
+             opacity: 8,
+             speed: 3
+           },
+           repulse: {
+             distance: 200,
+             duration: 0.4
+           },
+           push: {
+             particles_nb: 4
+           },
+           remove: {
+             particles_nb: 2
+           }
+         }
+         },
+         retina_detect: true
+         });
+      </script>
+   </body>
 </html>
- 

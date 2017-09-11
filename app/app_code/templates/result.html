@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Response</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+  <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css'>
+   <style>
+      $zindex-dropdown-backdrop:  990 !default;
+$zindex-navbar:            1000 !default;
+$zindex-dropdown:          1000 !default;
+$zindex-fixed:             1030 !default;
+$zindex-sticky:            1030 !default;
+$zindex-modal-backdrop:    1040 !default;
+$zindex-modal:             1050 !default;
+$zindex-popover:           1060 !default;
+$zindex-tooltip:           1070 !default;
+
+/* ---- reset ---- */
+
+body {
+  margin: 0;
+  font:normal 50% Arial, Helvetica, sans-serif;
+}
+
+.container
+{
+  padding-top:9%;
+  padding-left:8%;
+  padding-right:8%;
+
+}
+
+
+canvas {
+  display: block;
+  vertical-align: bottom;
+}
+
+/* ---- particles.js container ---- */
+
+#particles-js {
+	 overflow:hidden;
+  position: absolute;
+  width: 100vw;
+  height: 70vw;
+  background-image: url("https://i.imgur.com/2vOXiPV.jpg?1");
+  background-color: #262626;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+#submit
+         {
+         	margin-top: 4vh; 
+         }
+    </style>
+
+</head>
+<body>
+<div id="particles-js"></div>
+<div class="container">
+  <div class="card">
+    <div class="text-center h3 card-header">
+      Result
+    </div>
+     <div class="card-block">
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+<div class="form-group">
+<a href='/' class="btn btn-primary col" id="submit">Back</a>
+ </div> </div>     <div class="card-footer text-center text-muted">
+        ML is Fun
+      </div>
+      </div>
+      </div>
+       <script src='https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js'></script>
+<script src='https://code.jquery.com/jquery-3.1.1.slim.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js'></script>
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js'></script>
+  <script>
+    particlesJS("particles-js", {
+  particles: {
+    number: {
+      value: 250,
+      density: {
+        enable: true,
+        value_area: 800
+      }
+    },
+    color: {
+      value: "#ffffff"
+    },
+    shape: {
+      type: "circle",
+      stroke: {
+        width: 0,
+        color: "#000000"
+      },
+      polygon: {
+        nb_sides: 5
+      },
+      image: {
+        src: "img/github.svg",
+        width: 100,
+        height: 100
+      }
+    },
+    opacity: {
+      value: 0.5,
+      random: false,
+      anim: {
+        enable: false,
+        speed: 1,
+        opacity_min: 0.1,
+        sync: false
+      }
+    },
+    size: {
+      value: 3,
+      random: true,
+      anim: {
+        enable: false,
+        speed: 40,
+        size_min: 0.1,
+        sync: false
+      }
+    },
+    line_linked: {
+      enable: true,
+      distance: 150,
+      color: "#ffffff",
+      opacity: 0.4,
+      width: 1
+    },
+    move: {
+      enable: true,
+      speed: 6,
+      direction: "none",
+      random: false,
+      straight: false,
+      out_mode: "out",
+      bounce: false,
+      attract: {
+        enable: false,
+        rotateX: 600,
+        rotateY: 1200
+      }
+    }
+  },
+  interactivity: {
+    detect_on: "canvas",
+    events: {
+      onhover: {
+        enable: true,
+        mode: "grab"
+      },
+      onclick: {
+        enable: true,
+        mode: "repulse"
+      },
+      resize: true
+    },
+    modes: {
+      grab: {
+        distance: 140,
+        line_linked: {
+          opacity: 1
+        }
+      },
+      bubble: {
+        distance: 400,
+        size: 40,
+        duration: 2,
+        opacity: 8,
+        speed: 3
+      },
+      repulse: {
+        distance: 200,
+        duration: 0.4
+      },
+      push: {
+        particles_nb: 4
+      },
+      remove: {
+        particles_nb: 2
+      }
+    }
+  },
+  retina_detect: true
+});
+  </script>
+</body>
+</html>
